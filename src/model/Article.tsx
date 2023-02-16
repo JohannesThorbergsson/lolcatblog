@@ -1,3 +1,4 @@
+import "./Article.css"
 export type article = {
     "title": string,
     "subtitle": string,
@@ -7,7 +8,7 @@ export type article = {
 }
 export default function Article(props: article) {
     return (
-        <section>
+        <section className={"article"}>
             <h2>
                 {props.title}
             </h2>
@@ -18,7 +19,7 @@ export default function Article(props: article) {
                 {props.body}
             </p>
             <p>
-                {props.imgurl}
+                <img src={props.imgurl} alt={"img not found"}/>
             </p>
             <p>
                 {props.date}
